@@ -6,7 +6,7 @@
   right: 100px;
   overflow: hidden;
   border-radius: 10px;
-  transition: max-height 1s, max-width 2s;
+  transition: max-height 1s ease-in-out, max-width 1s ease-in-out;
 }
 
 .expanded {

@@ -1,10 +1,10 @@
 import './OverlappingElement.css';
 import {forwardRef} from "react";
 
-const OverlappingElement = forwardRef(function({isExpanded, content}, ref) {
+const OverlappingElement = forwardRef(function({isExpanded, children}, ref) {
   return (
       <div className={`overlappingElement ${isExpanded ? "expanded" : ''}`} ref={ref}>
-          {content}
+          {children}
       </div>
   );
 })
