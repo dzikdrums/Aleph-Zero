@@ -1,0 +1,15 @@
+.overlappingElement {
+  max-width: 200px;
+  max-height: 200px;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: max-height 1s, max-width 2s;
+}
+
+.expanded {
+  max-width: 1000px;
+  max-height: 1000px;
+}

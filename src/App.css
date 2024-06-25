@@ -1,0 +1,9 @@
+.app {
+  height: 300vh;
+  position: relative;
+  margin: 0 50px;
+}
+
+.image {
+  height: 500px;
+}
