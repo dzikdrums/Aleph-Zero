@@ -5,7 +5,7 @@ import ExpandableContentBox from "../ExpandableContentBox/ExpandableContentBox";
 import WideContentBox from "../WideContentBox/WideContentBox";
 
 const Container = () => {
-  const referenceElementRef = useRef();
+  const referenceElementRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className={styles.container}>

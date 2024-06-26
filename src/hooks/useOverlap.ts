@@ -1,9 +1,12 @@
-import { useCallback, useEffect, useState } from "react";
+import { RefObject, useCallback, useEffect, useState } from "react";
 
 // This custom hook allows us to pass refs to two elements in parameters, and it will
 // return a boolean, stating if the elements are overlapping.
 
-const useOverlap = (referenceElementRef, overlappingElementRef) => {
+const useOverlap = (
+  referenceElementRef: RefObject<HTMLDivElement>,
+  overlappingElementRef: RefObject<HTMLDivElement>,
+) => {
   const [isOverlapping, setIsOverlapping] = useState(false);
 
   const checkIfIsOverlapped = useCallback(() => {
