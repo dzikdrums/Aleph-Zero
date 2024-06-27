@@ -1,9 +1,19 @@
-import React, { forwardRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import styles from "./WideContentBox.module.css";
+import { ExpandableElementContext } from "../../context/expandableElementContext";
 
-const WideContentBox = forwardRef<HTMLDivElement>(function (props, ref) {
-  return <div className={styles.referenceElement} ref={ref} />;
-});
+const WideContentBox = () => {
+  const { updateRefs } = useContext(ExpandableElementContext);
+  const referenceElementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (referenceElementRef) {
+      updateRefs({ referenceElementRef: referenceElementRef });
+    }
+  }, [referenceElementRef]);
+
+  return <div className={styles.referenceElement} ref={referenceElementRef} />;
+};
 
 WideContentBox.displayName = "WideContentBox";
 

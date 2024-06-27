@@ -1,18 +1,19 @@
-import React, { useRef } from "react";
+import React from "react";
 import styles from "./Container.module.css";
-import image from "../../assets/cat.webp";
 import ExpandableContentBox from "../ExpandableContentBox/ExpandableContentBox";
 import WideContentBox from "../WideContentBox/WideContentBox";
+import ExpandableElementContextProvider from "../../context/expandableElementContext";
+import cat from "../../assets/cat.webp";
 
 const Container = () => {
-  const referenceElementRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className={styles.container}>
-      <WideContentBox ref={referenceElementRef} />
-      <ExpandableContentBox ref={referenceElementRef}>
-        <img className={styles.image} alt="cat" src={image} />
-      </ExpandableContentBox>
+      <ExpandableElementContextProvider>
+        <WideContentBox />
+        <ExpandableContentBox>
+          <img src={cat} alt="cat" />
+        </ExpandableContentBox>
+      </ExpandableElementContextProvider>
     </div>
   );
 };
