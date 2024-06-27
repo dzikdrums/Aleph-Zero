@@ -4,8 +4,10 @@ This project was build, in order to show my approach, to fixing certain coding c
 
 ## My explanation
 
-I choose to pick solution with most clarity and best performance in my opinion. 
- 
+This is my second solution to the problem, this time using React Context. 
+I think I like it a little less, cause it seems more complicated and requires broader look at the
+whole component tree, to get a clear view of what is the data flow. 
+
 - App component serves strictly as a gateway to the app
 - Container component makes the height needed to showcase the issue and solution, also holds the custom hook
 - WideContentBox component is the one triggering expansion of the other component
